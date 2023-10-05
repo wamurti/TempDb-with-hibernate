@@ -88,4 +88,4 @@ public class TempController {
 * Find/Show top-5 Lowest Temperature
 
 
-## Thanks to the rest of the team: Jonas, Björn and Alexander
+## Thanks to the rest of the team: Jonas, Frej and Alexander
