@@ -1,0 +1,128 @@
+ <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <link rel="stylesheet" href="mystyle.css">
+    <meta charset="UTF-8">
+    <title th:text="${Title}"></title>
+    <link rel="icon" type="image/png" href="/favicon-16x16.png">
+  </head>
+  <style>
+    table, th, td {
+      border: 2px solid black;
+      font-family: Garamond,serif;
+      font-size: larger;
+
+    }
+    th{
+      background-color: cornsilk;
+    }
+    td{
+      background-color: beige;
+    }
+    .flex-container{
+      flex-direction: row;
+      display: flex;
+
+    }
+    .flex-child{
+      flex:1;
+
+    }
+    .tabellerna{
+      border: 1px solid black;
+
+
+    }
+    body{
+      background-color: navajowhite;
+    }
+  </style>
+  <body>
+
+  <div class="flex-container">
+
+    <div class="flex-child">
+      <table class="tabellerna">
+        <tr>
+          <th colspan="4">Frej</th>
+        </tr>
+        <tr>
+          <th>ID</th>
+          <th>Temperatur</th>
+          <th>Datum</th>
+          <th>Tid</th>
+        </tr>
+        <tr>
+          <td th:text="${fs.id}"></td>
+          <td th:text="${fs.temperatur}"></td>
+          <td th:text="${fs.tid.toLocalDate()}"></td>
+          <td th:text="${fs.tid.toLocalTime()}"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="flex-child">
+      <table class="tabellerna">
+        <tr>
+          <th colspan="4">Jonas</th>
+        </tr>
+        <tr>
+          <th>ID</th>
+          <th>Temperatur</th>
+          <th>Datum</th>
+          <th>Tid</th>
+        </tr>
+        <tr>
+          <td th:text="${js.id}"></td>
+          <td th:text="${js.temperatur}"></td>
+          <td th:text="${js.tid.toLocalDate()}"></td>
+          <td th:text="${js.tid.toLocalTime()}"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="flex-child">
+      <table class="tabellerna">
+        <tr>
+          <th colspan="4">Bjorn</th>
+        </tr>
+        <tr>
+          <th>ID</th>
+          <th>Temperatur</th>
+          <th>Datum</th>
+          <th>Tid</th>
+        </tr>
+        <tr>
+          <td th:text="${bs.id}"></td>
+          <td th:text="${bs.temperatur}"></td>
+          <td th:text="${bs.tid.toLocalDate()}"></td>
+          <td th:text="${bs.tid.toLocalTime()}"></td>
+        </tr>
+      </table>
+    </div>
+    <div class="flex-child">
+      <table class="tabellerna">
+        <tr>
+          <th colspan="4">Acke</th>
+        </tr>
+        <tr>
+          <th>ID</th>
+          <th>Temperatur</th>
+          <th>Datum</th>
+          <th>Tid</th>
+        </tr>
+        <tr>
+          <td th:text="${as.id}"></td>
+          <td th:text="${as.temperatur}"></td>
+          <td th:text="${as.tid.toLocalDate()}"></td>
+          <td th:text="${as.tid.toLocalTime()}"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+  </body>
+  </html>
+

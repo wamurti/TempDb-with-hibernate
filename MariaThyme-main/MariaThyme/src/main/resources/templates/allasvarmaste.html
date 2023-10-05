@@ -1,0 +1,127 @@
+ <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <link rel="stylesheet" href="mystyle.css">
+    <meta charset="UTF-8">
+    <title th:text="${Title}"></title>
+    <link rel="icon" type="image/png" href="/favicon-16x16.png">
+  </head>
+  <style>
+    table, th, td {
+      border: 2px solid black;
+      font-family: Garamond,serif;
+      font-size: larger;
+
+    }
+    th{
+      background-color: cornsilk;
+    }
+    td{
+      background-color: beige;
+    }
+    .flex-container{
+      flex-direction: row;
+      display: flex;
+
+    }
+    .flex-child{
+      flex:1;
+
+    }
+    .tabellerna{
+      border: 1px solid black;
+
+
+    }
+    body{
+      background-color: navajowhite;
+    }
+  </style>
+  <body>
+
+  <div class="flex-container">
+
+    <div class="flex-child" th:if="${ not#lists.isEmpty(fv)}">
+      <table class="tabellerna">
+        <tr>
+          <th colspan="4">Frej</th>
+        </tr>
+        <tr>
+          <th>ID</th>
+          <th>Temperatur</th>
+          <th>Datum</th>
+          <th>Tid</th>
+        </tr>
+        <tr th:each="t : ${fv}">
+          <td th:text="${t.id}"></td>
+          <td th:text="${t.temperatur}"></td>
+          <td th:text="${t.tid.toLocalDate()}"></td>
+          <td th:text="${t.tid.toLocalTime()}"></td>
+        </tr>
+      </table>
+    </div>
+    <div class="flex-child" th:if="${ not#lists.isEmpty(bv)}">
+      <table class="tabellerna">
+        <tr>
+          <th colspan="4">Björn</th>
+        </tr>
+        <tr>
+          <th>ID</th>
+          <th>Temperatur</th>
+          <th>Datum</th>
+          <th>Tid</th>
+        </tr>
+        <tr th:each="t : ${bv}">
+          <td th:text="${t.id}"></td>
+          <td th:text="${t.temperatur}"></td>
+          <td th:text="${t.tid.toLocalDate()}"></td>
+          <td th:text="${t.tid.toLocalTime()}"></td>
+        </tr>
+      </table>
+    </div>
+    <div class="flex-child" th:if="${ not#lists.isEmpty(jv)}">
+      <table class="tabellerna">
+        <tr>
+          <th colspan="4">Jonas</th>
+        </tr>
+        <tr>
+          <th>ID</th>
+          <th>Temperatur</th>
+          <th>Datum</th>
+          <th>Tid</th>
+        </tr>
+        <tr th:each="t : ${jv}">
+          <td th:text="${t.id}"></td>
+          <td th:text="${t.temperatur}"></td>
+          <td th:text="${t.tid.toLocalDate()}"></td>
+          <td th:text="${t.tid.toLocalTime()}"></td>
+        </tr>
+      </table>
+    </div>
+    <div class="flex-child" th:if="${ not#lists.isEmpty(av)}">
+      <table class="tabellerna">
+        <tr>
+          <th colspan="4">Acke</th>
+        </tr>
+        <tr>
+          <th>ID</th>
+          <th>Temperatur</th>
+          <th>Datum</th>
+          <th>Tid</th>
+        </tr>
+        <tr th:each="t : ${av}">
+          <td th:text="${t.id}"></td>
+          <td th:text="${t.temperatur}"></td>
+          <td th:text="${t.tid.toLocalDate()}"></td>
+          <td th:text="${t.tid.toLocalTime()}"></td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+
+  </body>
+  </html>
+
